@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using Quiz3.Models;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <metaname ="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    <table border="1" cellpadding="2" cellspacing="2">
+        <tr>
+            <td>Name:</td>
+            <td>@Session["Name"]</td>
+        </tr>
+        <tr>
+            <td>Sales Agent</td>
+            <td>@Session["Agent"]</td>
+        </tr>
+        <tr>
+            <td>Item Name</td>
+            <td>@Session["Item"]</td>
+        </tr>
+        <tr>
+            <td>Sales Retail Price</td>
+            <td>@Session["SRP"]</td>
+        </tr>
+        <tr>
+            <td>Target Sales Price</td>
+            <td>@Session["TSP"]</td>
+        </tr>
+        <tr>
+            <td>Discount</td>
+            <td>@Session["SalesDiscount"]</td>
+        </tr>
+        <tr>
+            <td>Is the discount valid?</td>
+            <td>@Session["Condition"]</td>
+        </tr>
+    </table>
+
+    <input type="button" value="Input Session" onclick="location.href='@Url.Action("Add", "Quiz")'" />
+</body>
+</html>
